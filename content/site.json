@@ -6,7 +6,7 @@
     "phone": "+34 698 999 734",
     "linkedin": "https://www.linkedin.com/in/skolesnikov",
     "portrait": "assets/portrait.jpg",
-    "formEndpoint": ""
+    "formEndpoint": "https://formspree.io/f/xkodkdwp"
   },
   "logos": [
     {
@@ -34,48 +34,20 @@
     "avatar": "assets/avatar-ivo.png"
   },
   "en": {
-    "navAbout": "About",
-    "navServices": "Services",
-    "navProcess": "How I work",
-    "navContact": "Contact",
     "eyebrow": "AI · Product · Operations consultant",
     "heroTitle": "AI that reaches production — not just a pilot.",
     "heroSub": "I help startups, scale-ups and SMEs in Spain and the EU turn AI from an idea into working processes with measurable results.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "Message on Telegram",
+    "navAbout": "About",
+    "navServices": "Services",
+    "navProcess": "How I work",
+    "navContact": "Contact",
     "companiesLabel": "Worked at and with",
-    "fName": "Name",
-    "fEmail": "Email",
-    "fCompany": "Company (optional)",
-    "fMessage": "What would you like to improve?",
-    "fSubmit": "Send request",
-    "linkedinValue": "Open profile",
     "testimonialsLabel": "What clients say",
     "quote1": "Had a great time working with Sergey at Finom! He was a Head of AI who basically took our AI initiatives from zero to one, launching several AI agents even when we had pretty limited resources. He's super into numbers and data, and it shows in everything he does. Definitely recommend him for any data-driven challenge!",
     "quote1Author": "Ivo Dimitrov",
     "quote1Role": "Co-founder and Chief AI Officer, Finom",
-    "formIdle": "Or write to me directly on Telegram or by email.",
-    "formSent": "Thanks — your email client is open with the request. Send it and I'll reply within one working day.",
-    "companies": [
-      "Tinkoff",
-      "Finom",
-      "Nebius",
-      "Extruct AI"
-    ],
-    "diffs": [
-      {
-        "t": "Technical foundation",
-        "d": "Applied physics, mathematics and computer science at MIPT — a working understanding of algorithms, data and system architecture, not just off-the-shelf tools."
-      },
-      {
-        "t": "Scale and startup speed",
-        "d": "High-load products with millions of users, and hands-on work inside small startup teams where one person ships end to end."
-      },
-      {
-        "t": "Measurable outcome, not tooling",
-        "d": "Every stage has a deliverable and a target metric. You end up with something your team can run without me."
-      }
-    ],
     "creds": [
       {
         "k": "10+ years",
@@ -96,6 +68,20 @@
     "aboutTitle": "Strategy and hands-on delivery, from the same person.",
     "aboutP1": "I am a product and technology executive with over ten years of experience across B2C, B2B, B2B2C, platforms and AI/ML. As Director of AI at Finom, a European neobank for SMEs, I built the AI function from scratch, defined an AI-first strategy and shipped more than ten production solutions — from document processing to agentic systems for customer support, transaction monitoring and client verification.",
     "aboutP2": "Before that, as Director of Products at Tinkoff, I led a B2B2C business unit with 10M+ monthly active users, 1,000+ partners and a team of 150+, growing annual revenue 1.5× to the $100M mark. Most of the market sits at one extreme: large consultancies bring strategy without execution, freelance developers execute without business context. I cover the whole cycle — audit, roadmap, working solution, team training.",
+    "diffs": [
+      {
+        "t": "Technical foundation",
+        "d": "Applied physics, mathematics and computer science at MIPT — a working understanding of algorithms, data and system architecture, not just off-the-shelf tools."
+      },
+      {
+        "t": "Scale and startup speed",
+        "d": "High-load products with millions of users, and hands-on work inside small startup teams where one person ships end to end."
+      },
+      {
+        "t": "Measurable outcome, not tooling",
+        "d": "Every stage has a deliverable and a target metric. You end up with something your team can run without me."
+      }
+    ],
     "servicesTitle": "Six ways I can help.",
     "servicesSub": "Remote, project-based work with a clear deliverable at every stage.",
     "deliverableLabel": "Deliverable:",
@@ -188,52 +174,32 @@
     ],
     "contactTitle": "Let's talk about your case.",
     "contactSub": "Tell me the process you want to improve and I will come back with a first view on where AI actually pays off.",
+    "fName": "Name",
+    "fEmail": "Email",
+    "fCompany": "Company (optional)",
+    "fMessage": "What would you like to improve?",
+    "fSubmit": "Send request",
+    "formIdle": "Or write to me directly on Telegram or by email.",
+    "formSent": "Thanks — your email client is open with the request. Send it and I'll reply within one working day.",
+    "linkedinValue": "Open profile",
     "phoneLabel": "Phone",
     "footerNote": "Independent consultant · Tarragona, Spain · Remote across the EU"
   },
   "es": {
-    "navAbout": "Sobre mí",
-    "navServices": "Servicios",
-    "navProcess": "Cómo trabajo",
-    "navContact": "Contacto",
     "eyebrow": "Consultor de IA, producto y operaciones",
     "heroTitle": "IA que llega a producción, no solo a un piloto.",
     "heroSub": "Ayudo a startups, scale-ups y pymes de España y la UE a convertir la IA en procesos que funcionan, con resultados medibles.",
     "ctaPrimary": "Hablemos",
     "ctaSecondary": "Escribir por Telegram",
+    "navAbout": "Sobre mí",
+    "navServices": "Servicios",
+    "navProcess": "Cómo trabajo",
+    "navContact": "Contacto",
     "companiesLabel": "He trabajado en y con",
-    "fName": "Nombre",
-    "fEmail": "Email",
-    "fCompany": "Empresa (opcional)",
-    "fMessage": "¿Qué proceso quiere mejorar?",
-    "fSubmit": "Enviar solicitud",
-    "linkedinValue": "Ver perfil",
     "testimonialsLabel": "Lo que dicen los clientes",
     "quote1": "Fue un placer trabajar con Sergey en Finom. Como Head of AI, llevó nuestras iniciativas de IA de cero a uno y lanzó varios agentes de IA incluso con recursos bastante limitados. Es muy analítico, muy de números y datos, y eso se nota en todo lo que hace. Lo recomiendo sin duda para cualquier reto basado en datos.",
     "quote1Author": "Ivo Dimitrov",
     "quote1Role": "Cofundador y Chief AI Officer, Finom",
-    "formIdle": "También puede escribirme directamente por Telegram o email.",
-    "formSent": "Gracias: se ha abierto su cliente de correo con la solicitud. Envíela y le respondo en un día laborable.",
-    "companies": [
-      "Tinkoff",
-      "Finom",
-      "Nebius",
-      "Extruct AI"
-    ],
-    "diffs": [
-      {
-        "t": "Base técnica sólida",
-        "d": "Física aplicada, matemáticas e informática en el MIPT: comprensión real de algoritmos, datos y arquitectura de sistemas, más allá de las herramientas ya hechas."
-      },
-      {
-        "t": "Escala y velocidad de startup",
-        "d": "Productos de alta carga con millones de usuarios y trabajo directo en equipos pequeños de startup, donde una persona lleva el proyecto de principio a fin."
-      },
-      {
-        "t": "Resultado medible, no herramientas",
-        "d": "Cada etapa tiene un entregable y una métrica objetivo. Se queda con algo que su equipo puede operar sin mí."
-      }
-    ],
     "creds": [
       {
         "k": "+10 años",
@@ -254,6 +220,20 @@
     "aboutTitle": "Estrategia y ejecución, de la misma persona.",
     "aboutP1": "Soy directivo de producto y tecnología con más de diez años de experiencia en B2C, B2B, B2B2C, plataformas e IA/ML. Como Director of AI en Finom, neobanco europeo para pymes, creé la función de IA desde cero, definí una estrategia AI-first y lancé más de diez soluciones en producción: desde procesamiento de documentos hasta sistemas agénticos de atención al cliente, monitorización de transacciones y verificación de clientes.",
     "aboutP2": "Antes, como Director of Products en Tinkoff, dirigí una unidad B2B2C con más de 10 millones de usuarios activos mensuales, más de 1.000 socios y un equipo de más de 150 personas, multiplicando por 1,5 la facturación anual hasta los 100 millones de dólares. El mercado suele estar en los extremos: las grandes consultoras aportan estrategia sin ejecución y los freelancers técnicos ejecutan sin contexto de negocio. Yo cubro todo el ciclo: auditoría, hoja de ruta, solución en funcionamiento y formación del equipo.",
+    "diffs": [
+      {
+        "t": "Base técnica sólida",
+        "d": "Física aplicada, matemáticas e informática en el MIPT: comprensión real de algoritmos, datos y arquitectura de sistemas, más allá de las herramientas ya hechas."
+      },
+      {
+        "t": "Escala y velocidad de startup",
+        "d": "Productos de alta carga con millones de usuarios y trabajo directo en equipos pequeños de startup, donde una persona lleva el proyecto de principio a fin."
+      },
+      {
+        "t": "Resultado medible, no herramientas",
+        "d": "Cada etapa tiene un entregable y una métrica objetivo. Se queda con algo que su equipo puede operar sin mí."
+      }
+    ],
     "servicesTitle": "Seis formas de trabajar juntos.",
     "servicesSub": "Trabajo remoto y por proyectos, con un entregable claro en cada etapa.",
     "deliverableLabel": "Resultado:",
@@ -346,6 +326,14 @@
     ],
     "contactTitle": "Hablemos de su caso.",
     "contactSub": "Cuénteme qué proceso quiere mejorar y le devuelvo una primera visión de dónde la IA aporta retorno real.",
+    "fName": "Nombre",
+    "fEmail": "Email",
+    "fCompany": "Empresa (opcional)",
+    "fMessage": "¿Qué proceso quiere mejorar?",
+    "fSubmit": "Enviar solicitud",
+    "formIdle": "También puede escribirme directamente por Telegram o email.",
+    "formSent": "Gracias: se ha abierto su cliente de correo con la solicitud. Envíela y le respondo en un día laborable.",
+    "linkedinValue": "Ver perfil",
     "phoneLabel": "Teléfono",
     "footerNote": "Consultor independiente · Tarragona, España · Remoto en toda la UE"
   }
