@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sergei Kolesnikov — AI, Product & Operations consultant</title>
+<meta name="description" content="Consulting on AI, automation and digital product for startups, scale-ups and SMEs in Spain and the EU.">
+<meta property="og:title" content="Sergei Kolesnikov — AI, Product & Operations consultant">
+<meta property="og:description" content="AI that reaches production, not just a pilot.">
+<meta property="og:type" content="website">
+<link rel="preload" href="content/site.json" as="fetch" crossorigin="anonymous">
+<style>
+  html, body { margin:0; padding:0; background:#fbfbfd; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,'Segoe UI',sans-serif; color:#1d1d1f; }
+  a { color:#0071e3; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  ::selection { background:#0071e3; color:#fff; }
+  .wrap { max-width:1040px; margin:0 auto; padding-left:24px; padding-right:24px; }
+  .h1 { font-size:66px; line-height:1.04; letter-spacing:-0.028em; font-weight:700; margin:0 0 24px; }
+  .h2 { font-size:42px; line-height:1.1; letter-spacing:-0.022em; font-weight:700; margin:0 0 18px; }
+  .eyebrow { font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#6e6e73; margin-bottom:20px; }
+  .label { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#86868b; margin-bottom:22px; }
+  .card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:20px; }
+  .card:hover { box-shadow:0 10px 34px rgba(0,0,0,0.07); }
+  .btn { display:inline-flex; align-items:center; padding:13px 26px; border-radius:980px; font-size:16px; font-weight:500; text-decoration:none; }
+  .btn:hover { text-decoration:none; }
+  .btn-primary { background:#0071e3; color:#fff; }
+  .btn-primary:hover { background:#0077ed; }
+  .btn-ghost { background:rgba(0,0,0,0.05); color:#1d1d1f; }
+  .btn-ghost:hover { background:rgba(0,0,0,0.09); }
+  .pill { border:none; cursor:pointer; font:inherit; font-size:12px; font-weight:600; letter-spacing:0.02em; padding:5px 12px; border-radius:980px; background:transparent; color:#6e6e73; transition:background 0.2s; }
+  .pill[aria-pressed="true"] { background:#fff; color:#1d1d1f; box-shadow:0 1px 3px rgba(0,0,0,0.12); }
+  .navlink { font-size:13px; color:#1d1d1f; opacity:0.8; text-decoration:none; }
+  .navlink:hover { opacity:1; text-decoration:none; }
+  .field { display:flex; flex-direction:column; gap:7px; font-size:13px; color:#6e6e73; }
+  .field input, .field textarea { font:inherit; font-size:16px; color:#1d1d1f; padding:12px 14px; border:1px solid rgba(0,0,0,0.14); border-radius:12px; background:#fbfbfd; outline:none; }
+  .field textarea { resize:vertical; }
+  .field input:focus, .field textarea:focus { border-color:#0071e3; box-shadow:0 0 0 3px rgba(0,113,227,0.16); }
+  .contact-card { background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:16px; padding:18px 20px; text-decoration:none; color:#1d1d1f; display:flex; align-items:center; gap:14px; }
+  .contact-card:hover { box-shadow:0 8px 26px rgba(0,0,0,0.08); text-decoration:none; }
+  .contact-card img { width:22px; height:22px; flex:none; opacity:0.75; }
+  @media (max-width: 900px) { .creds-grid { grid-template-columns: 1fr !important; } }
+  @media (max-width: 860px) {
+    .contact-grid { grid-template-columns: 1fr !important; }
+    .hero-grid { grid-template-columns: 1fr !important; }
+    .nav-links { display:none !important; }
+    .h1 { font-size: 44px !important; }
+    .h2 { font-size: 32px !important; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript style="display:block; padding:48px 24px; font-size:18px;">
+  Sergei Kolesnikov — AI, Product &amp; Operations consultant. Contact: kolesnikov@phystech.edu · Telegram @serkolesnikov
+</noscript>
+<script>
+var ICON = "https://cdn.jsdelivr.net/npm/lucide-static@0.428.0/icons/";
+var DATA = null, LANG = "en", SENT = false;
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function render() {
+  var t = DATA[LANG], s = DATA.site;
+  var logos = DATA.logos.map(function (l) {
+    return '<div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:16px; height:92px; display:flex; align-items:center; justify-content:center; padding:20px 24px;">' +
+      '<img src="' + esc(l.image) + '" alt="' + esc(l.name) + '" style="max-width:100%; max-height:' + l.maxHeight + 'px; object-fit:contain; opacity:0.72;"></div>';
+  }).join("");
+
+  var creds = t.creds.map(function (c) {
+    return '<div style="background:#fff; padding:34px 30px; display:flex; flex-direction:column; gap:10px;">' +
+      '<div style="font-size:13px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#0071e3;">' + esc(c.k) + '</div>' +
+      '<h3 style="font-size:24px; line-height:1.2; letter-spacing:-0.016em; font-weight:600; margin:0;">' + esc(c.t) + '</h3>' +
+      '<p style="font-size:16px; line-height:1.5; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(c.d) + '</p></div>';
+  }).join("");
+
+  var diffs = t.diffs.map(function (d) {
+    return '<div><h3 style="font-size:18px; line-height:1.3; letter-spacing:-0.01em; font-weight:600; margin:0 0 10px; color:#f5f5f7;">' + esc(d.t) + '</h3>' +
+      '<p style="font-size:16px; line-height:1.55; color:#a1a1a8; margin:0; text-wrap:pretty;">' + esc(d.d) + '</p></div>';
+  }).join("");
+
+  var services = t.services.map(function (v) {
+    return '<div class="card" style="padding:32px; display:flex; flex-direction:column; gap:12px;">' +
+      '<div style="font-size:13px; font-weight:600; color:#0071e3; letter-spacing:0.02em;">' + esc(v.n) + '</div>' +
+      '<h3 style="font-size:22px; line-height:1.25; letter-spacing:-0.014em; font-weight:600; margin:0;">' + esc(v.t) + '</h3>' +
+      '<p style="font-size:16px; line-height:1.5; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(v.d) + '</p>' +
+      '<div style="margin-top:6px; padding-top:16px; border-top:1px solid rgba(0,0,0,0.07); font-size:14px; line-height:1.45;">' +
+      '<span style="color:#6e6e73;">' + esc(t.deliverableLabel) + ' </span>' + esc(v.r) + '</div></div>';
+  }).join("");
+
+  var steps = t.steps.map(function (st) {
+    return '<div style="display:flex; gap:18px;">' +
+      '<div style="flex:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(0,0,0,0.16); background:#fff; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:600;">' + esc(st.n) + '</div>' +
+      '<div><h3 style="font-size:19px; line-height:1.3; letter-spacing:-0.01em; font-weight:600; margin:5px 0 8px;">' + esc(st.t) + '</h3>' +
+      '<p style="font-size:15px; line-height:1.55; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(st.d) + '</p></div></div>';
+  }).join("");
+
+  function contactCard(href, icon, label, value, blank) {
+    return '<a href="' + esc(href) + '"' + (blank ? ' target="_blank" rel="noopener noreferrer"' : '') + ' class="contact-card">' +
+      '<img src="' + ICON + icon + '.svg" alt="">' +
+      '<span><span style="display:block; font-size:12px; color:#6e6e73; margin-bottom:3px;">' + esc(label) + '</span>' +
+      '<span style="display:block; font-size:15px; font-weight:500; word-break:break-word;">' + esc(value) + '</span></span></a>';
+  }
+
+  document.getElementById("app").innerHTML =
+  '<div style="position:sticky; top:0; z-index:50; background:rgba(251,251,253,0.72); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid rgba(0,0,0,0.07);">' +
+    '<div class="wrap" style="height:52px; display:flex; align-items:center; justify-content:space-between; gap:24px;">' +
+      '<a href="#top" style="font-size:15px; font-weight:600; letter-spacing:-0.01em; color:#1d1d1f; text-decoration:none;">' + esc(s.name) + '</a>' +
+      '<div class="nav-links" style="display:flex; align-items:center; gap:28px;">' +
+        '<a href="#about" class="navlink">' + esc(t.navAbout) + '</a>' +
+        '<a href="#services" class="navlink">' + esc(t.navServices) + '</a>' +
+        '<a href="#process" class="navlink">' + esc(t.navProcess) + '</a>' +
+        '<a href="#contact" class="navlink">' + esc(t.navContact) + '</a>' +
+      '</div>' +
+      '<div style="display:flex; align-items:center; gap:2px; background:rgba(0,0,0,0.05); border-radius:980px; padding:2px;">' +
+        '<button class="pill" aria-pressed="' + (LANG === "en") + '" data-lang="en">EN</button>' +
+        '<button class="pill" aria-pressed="' + (LANG === "es") + '" data-lang="es">ES</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div id="top" class="wrap" style="padding-top:96px; padding-bottom:72px;">' +
+    '<div class="hero-grid" style="display:grid; grid-template-columns:1.35fr 1fr; gap:56px; align-items:center;">' +
+      '<div>' +
+        '<div style="font-size:15px; font-weight:600; color:#0071e3; letter-spacing:0.01em; margin-bottom:16px;">' + esc(t.eyebrow) + '</div>' +
+        '<h1 class="h1">' + esc(t.heroTitle) + '</h1>' +
+        '<p style="font-size:21px; line-height:1.48; letter-spacing:-0.01em; color:#494950; margin:0 0 36px; max-width:34ch; text-wrap:pretty;">' + esc(t.heroSub) + '</p>' +
+        '<div style="display:flex; flex-wrap:wrap; gap:12px;">' +
+          '<a href="#contact" class="btn btn-primary">' + esc(t.ctaPrimary) + '</a>' +
+          '<a href="https://t.me/' + esc(s.telegram) + '" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">' + esc(t.ctaSecondary) + '</a>' +
+        '</div>' +
+      '</div>' +
+      '<div style="display:flex; justify-content:center;">' +
+        '<img src="' + esc(s.portrait) + '" alt="' + esc(s.name) + '" style="width:100%; max-width:340px; aspect-ratio:4/5; object-fit:cover; border-radius:24px; box-shadow:0 18px 60px rgba(0,0,0,0.14);">' +
+      '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div class="wrap" style="padding-bottom:32px;">' +
+    '<div class="label">' + esc(t.companiesLabel) + '</div>' +
+    '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:16px;">' + logos + '</div>' +
+  '</div>' +
+
+  '<div class="wrap" style="padding-bottom:96px;">' +
+    '<div class="label">' + esc(t.testimonialsLabel) + '</div>' +
+    '<blockquote style="margin:0; background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:24px; padding:48px 52px; display:flex; flex-direction:column; gap:28px;">' +
+      '<p style="font-size:26px; line-height:1.4; letter-spacing:-0.014em; margin:0; max-width:52ch; text-wrap:pretty;">' + esc(t.quote1) + '</p>' +
+      '<footer style="display:flex; align-items:center; gap:14px;">' +
+        '<img src="' + esc(DATA.testimonial.avatar) + '" alt="' + esc(t.quote1Author) + '" style="flex:none; width:44px; height:44px; border-radius:50%; object-fit:cover;">' +
+        '<div><div style="font-size:16px; font-weight:600;">' + esc(t.quote1Author) + '</div>' +
+        '<div style="font-size:14px; color:#6e6e73;">' + esc(t.quote1Role) + '</div></div>' +
+      '</footer>' +
+    '</blockquote>' +
+  '</div>' +
+
+  '<div class="wrap" style="padding-bottom:96px;">' +
+    '<div class="creds-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(0,0,0,0.08); border-radius:20px; overflow:hidden;">' + creds + '</div>' +
+  '</div>' +
+
+  '<div id="about" style="background:#1d1d1f; color:#f5f5f7;">' +
+    '<div class="wrap" style="padding-top:112px; padding-bottom:112px;">' +
+      '<div class="eyebrow" style="color:#8d8d94;">' + esc(t.navAbout) + '</div>' +
+      '<h2 class="h2" style="font-size:48px; line-height:1.08; letter-spacing:-0.024em; margin:0 0 44px; max-width:22ch; text-wrap:balance; color:#f5f5f7;">' + esc(t.aboutTitle) + '</h2>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px 48px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.16);">' +
+        '<p style="font-size:18px; line-height:1.6; letter-spacing:-0.006em; color:#c9c9ce; margin:0; text-wrap:pretty;">' + esc(t.aboutP1) + '</p>' +
+        '<p style="font-size:18px; line-height:1.6; letter-spacing:-0.006em; color:#c9c9ce; margin:0; text-wrap:pretty;">' + esc(t.aboutP2) + '</p>' +
+      '</div>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:36px 48px; padding-top:48px;">' + diffs + '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div id="services" class="wrap" style="padding-top:104px; padding-bottom:104px;">' +
+    '<div style="max-width:660px; margin-bottom:48px;">' +
+      '<div class="eyebrow">' + esc(t.navServices) + '</div>' +
+      '<h2 class="h2">' + esc(t.servicesTitle) + '</h2>' +
+      '<p style="font-size:19px; line-height:1.55; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(t.servicesSub) + '</p>' +
+    '</div>' +
+    '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">' + services + '</div>' +
+  '</div>' +
+
+  '<div id="process" style="background:#f5f5f7; border-top:1px solid rgba(0,0,0,0.07); border-bottom:1px solid rgba(0,0,0,0.07);">' +
+    '<div class="wrap" style="padding-top:104px; padding-bottom:104px;">' +
+      '<div style="max-width:660px; margin-bottom:56px;">' +
+        '<div class="eyebrow">' + esc(t.navProcess) + '</div>' +
+        '<h2 class="h2">' + esc(t.processTitle) + '</h2>' +
+        '<p style="font-size:19px; line-height:1.55; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(t.processSub) + '</p>' +
+      '</div>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:36px 40px;">' + steps + '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div id="contact" class="wrap" style="padding-top:104px; padding-bottom:120px;">' +
+    '<div style="max-width:700px; margin:0 auto 56px; text-align:center;">' +
+      '<h2 class="h2" style="font-size:46px; line-height:1.08; letter-spacing:-0.024em;">' + esc(t.contactTitle) + '</h2>' +
+      '<p style="font-size:19px; line-height:1.55; color:#6e6e73; margin:0; text-wrap:pretty;">' + esc(t.contactSub) + '</p>' +
+    '</div>' +
+    '<div class="contact-grid" style="display:grid; grid-template-columns:1.15fr 1fr; gap:24px; align-items:start;">' +
+      '<form id="request-form" style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:22px; padding:32px; display:flex; flex-direction:column; gap:16px;">' +
+        '<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px;">' +
+          '<label class="field">' + esc(t.fName) + '<input name="name" type="text" required></label>' +
+          '<label class="field">' + esc(t.fEmail) + '<input name="email" type="email" required></label>' +
+        '</div>' +
+        '<label class="field">' + esc(t.fCompany) + '<input name="company" type="text"></label>' +
+        '<label class="field">' + esc(t.fMessage) + '<textarea name="message" rows="5" required></textarea></label>' +
+        '<div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:4px;">' +
+          '<button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; font:inherit; font-size:16px; font-weight:500;">' + esc(t.fSubmit) + '</button>' +
+          '<span id="form-status" style="font-size:14px; line-height:1.45; color:#6e6e73;">' + esc(SENT ? t.formSent : t.formIdle) + '</span>' +
+        '</div>' +
+      '</form>' +
+      '<div style="display:flex; flex-direction:column; gap:12px;">' +
+        contactCard("mailto:" + s.email, "mail", "Email", s.email, false) +
+        contactCard("https://t.me/" + s.telegram, "send", "Telegram", "@" + s.telegram, true) +
+        contactCard(s.linkedin, "linkedin", "LinkedIn", t.linkedinValue, true) +
+        contactCard("tel:" + s.phone.replace(/\s/g, ""), "phone", t.phoneLabel, s.phone, false) +
+      '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div style="border-top:1px solid rgba(0,0,0,0.09);">' +
+    '<div class="wrap" style="padding-top:28px; padding-bottom:28px; display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; font-size:13px; color:#6e6e73;">' +
+      '<div>© ' + new Date().getFullYear() + ' ' + esc(s.name) + '</div><div>' + esc(t.footerNote) + '</div>' +
+    '</div>' +
+  '</div>';
+
+  document.documentElement.lang = LANG;
+  var pills = document.querySelectorAll(".pill");
+  for (var i = 0; i < pills.length; i++) {
+    pills[i].addEventListener("click", function () {
+      LANG = this.getAttribute("data-lang");
+      try { localStorage.setItem("sk-site-lang", LANG); } catch (e) {}
+      render();
+    });
+  }
+  document.getElementById("request-form").addEventListener("submit", onSubmit);
+}
+
+function onSubmit(e) {
+  e.preventDefault();
+  var form = e.target, s = DATA.site, t = DATA[LANG];
+  var get = function (n) { return form.elements[n] ? form.elements[n].value.trim() : ""; };
+  var status = document.getElementById("form-status");
+  var payload = { name: get("name"), email: get("email"), company: get("company"), message: get("message") };
+
+  if (s.formEndpoint) {
+    status.textContent = "…";
+    fetch(s.formEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (!r.ok) throw new Error("bad response");
+      SENT = true;
+      form.reset();
+      status.textContent = t.formSent;
+    }).catch(function () {
+      status.textContent = t.formError || t.formIdle;
+    });
+    return;
+  }
+
+  var body = [payload.name, payload.email, payload.company, "", payload.message].join("\n");
+  window.location.href = "mailto:" + s.email +
+    "?subject=" + encodeURIComponent("Consulting request — " + (payload.name || "website")) +
+    "&body=" + encodeURIComponent(body);
+  SENT = true;
+  status.textContent = t.formSent;
+}
+
+fetch("content/site.json", { cache: "no-cache" })
+  .then(function (r) { return r.json(); })
+  .then(function (d) {
+    DATA = d;
+    try {
+      var saved = localStorage.getItem("sk-site-lang");
+      if (saved === "en" || saved === "es") LANG = saved;
+      else if ((navigator.language || "").toLowerCase().indexOf("es") === 0) LANG = "es";
+    } catch (e) {}
+    render();
+  })
+  .catch(function (err) {
+    document.getElementById("app").innerHTML =
+      '<div style="padding:64px 24px; font-size:18px;">Content failed to load. ' + esc(err.message) + '</div>';
+  });
+</script>
+</body>
+</html>
