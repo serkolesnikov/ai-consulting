@@ -4,7 +4,7 @@ media:
 
 content:
   - name: site
-    label: Настройки сайта
+    label: Сайт
     type: file
     path: content/site.json
     fields:
@@ -21,13 +21,13 @@ content:
           - { name: formEndpoint, label: "Formspree endpoint (URL формы)", type: string, required: false }
 
       - name: logos
-        label: Логотипы компаний
+        label: "Логотипы (последний показан обрезанным)"
         type: object
         list: true
         fields:
           - { name: name, label: Название, type: string }
           - { name: image, label: Логотип, type: image }
-          - { name: maxHeight, label: Высота логотипа, px, type: number }
+          - { name: maxHeight, label: "Высота логотипа, px", type: number }
 
       - name: testimonial
         label: Отзыв — аватар
@@ -39,140 +39,90 @@ content:
         label: English
         type: object
         fields:
-          - { name: eyebrow, label: Надзаголовок, type: string }
-          - { name: heroTitle, label: Главный заголовок, type: string }
-          - { name: heroSub, label: Подзаголовок, type: text }
-          - { name: ctaPrimary, label: Кнопка 1, type: string }
-          - { name: ctaSecondary, label: Кнопка 2, type: string }
-          - { name: navAbout, label: "Меню: обо мне", type: string }
-          - { name: navServices, label: "Меню: услуги", type: string }
-          - { name: navProcess, label: "Меню: как работаю", type: string }
-          - { name: navContact, label: "Меню: контакты", type: string }
-          - { name: companiesLabel, label: Заголовок блока логотипов, type: string }
-          - { name: testimonialsLabel, label: Заголовок блока отзывов, type: string }
-          - { name: quote1, label: Текст отзыва, type: text }
-          - { name: quote1Author, label: Автор отзыва, type: string }
-          - { name: quote1Role, label: Должность автора, type: string }
-          - name: creds
-            label: Три карточки-факта
+          - { name: lead, label: "Главный посыл (жирная строка)", type: text }
+          - { name: background, label: "Бэкграунд (тусклый абзац)", type: text }
+          - { name: intro2, label: "Последние роли", type: text }
+          - { name: cta, label: "Кнопка", type: string }
+          - { name: companiesLabel, label: "Заголовок блока логотипов", type: string }
+          - { name: andMore, label: "Подпись «и другие»", type: string }
+          - { name: quote1, label: "Текст отзыва", type: text }
+          - { name: quote1Author, label: "Автор отзыва", type: string }
+          - { name: quote1Role, label: "Должность автора", type: string }
+          - { name: helpTitle, label: "Заголовок «Чем помогаю»", type: string }
+          - { name: help, label: "Список: чем помогаю", type: string, list: true }
+          - { name: processTitle, label: "Заголовок «Как работаю»", type: string }
+          - { name: processLine, label: "Как работаю: вступление", type: text }
+          - name: phases
+            label: "Этапы (Understand / Identify / Execute)"
             type: object
             list: true
             fields:
-              - { name: k, label: Подпись, type: string }
-              - { name: t, label: Заголовок, type: string }
-              - { name: d, label: Описание, type: text }
-          - { name: aboutTitle, label: "Обо мне: заголовок", type: string }
-          - { name: aboutP1, label: "Обо мне: абзац 1", type: text }
-          - { name: aboutP2, label: "Обо мне: абзац 2", type: text }
-          - name: diffs
-            label: "Обо мне: отличия"
-            type: object
-            list: true
-            fields:
-              - { name: t, label: Заголовок, type: string }
-              - { name: d, label: Описание, type: text }
-          - { name: servicesTitle, label: "Услуги: заголовок", type: string }
-          - { name: servicesSub, label: "Услуги: подзаголовок", type: text }
-          - { name: deliverableLabel, label: "Подпись «Результат»", type: string }
-          - name: services
-            label: Услуги
-            type: object
-            list: true
-            fields:
-              - { name: n, label: Номер, type: string }
               - { name: t, label: Название, type: string }
+              - { name: k, label: "Уточнение в скобках", type: string }
               - { name: d, label: Описание, type: text }
-              - { name: r, label: Результат, type: text }
-          - { name: processTitle, label: "Как работаю: заголовок", type: string }
-          - { name: processSub, label: "Как работаю: подзаголовок", type: text }
-          - name: steps
-            label: Этапы работы
+          - { name: processNote, label: "Как работаю: примечание", type: text }
+          - { name: experienceTitle, label: "Заголовок «Опыт»", type: string }
+          - name: roles
+            label: Опыт
             type: object
             list: true
             fields:
-              - { name: n, label: Номер, type: string }
-              - { name: t, label: Название, type: string }
+              - { name: role, label: "Роль / место", type: string }
               - { name: d, label: Описание, type: text }
-          - { name: contactTitle, label: "Контакты: заголовок", type: string }
-          - { name: contactSub, label: "Контакты: подзаголовок", type: text }
+          - { name: contactTitle, label: "Заголовок «Контакты»", type: string }
+          - { name: contactSub, label: "Контакты: текст", type: text }
           - { name: fName, label: "Форма: имя", type: string }
           - { name: fEmail, label: "Форма: email", type: string }
-          - { name: fCompany, label: "Форма: компания", type: string }
           - { name: fMessage, label: "Форма: сообщение", type: string }
           - { name: fSubmit, label: "Форма: кнопка", type: string }
           - { name: formIdle, label: "Форма: подсказка", type: text }
-          - { name: formSent, label: "Форма: сообщение после отправки", type: text }
-          - { name: linkedinValue, label: "Подпись LinkedIn-карточки", type: string }
-          - { name: phoneLabel, label: "Подпись телефона", type: string }
+          - { name: formSent, label: "Форма: после отправки", type: text }
+          - { name: formMailto, label: "Форма: если открылся почтовый клиент", type: text }
+          - { name: formError, label: "Форма: сообщение об ошибке", type: text }
           - { name: footerNote, label: Подвал, type: string }
 
       - name: es
         label: Español
         type: object
         fields:
-          - { name: eyebrow, label: Надзаголовок, type: string }
-          - { name: heroTitle, label: Главный заголовок, type: string }
-          - { name: heroSub, label: Подзаголовок, type: text }
-          - { name: ctaPrimary, label: Кнопка 1, type: string }
-          - { name: ctaSecondary, label: Кнопка 2, type: string }
-          - { name: navAbout, label: "Меню: обо мне", type: string }
-          - { name: navServices, label: "Меню: услуги", type: string }
-          - { name: navProcess, label: "Меню: как работаю", type: string }
-          - { name: navContact, label: "Меню: контакты", type: string }
-          - { name: companiesLabel, label: Заголовок блока логотипов, type: string }
-          - { name: testimonialsLabel, label: Заголовок блока отзывов, type: string }
-          - { name: quote1, label: Текст отзыва, type: text }
-          - { name: quote1Author, label: Автор отзыва, type: string }
-          - { name: quote1Role, label: Должность автора, type: string }
-          - name: creds
-            label: Три карточки-факта
+          - { name: lead, label: "Главный посыл (жирная строка)", type: text }
+          - { name: background, label: "Бэкграунд (тусклый абзац)", type: text }
+          - { name: intro2, label: "Последние роли", type: text }
+          - { name: cta, label: "Кнопка", type: string }
+          - { name: companiesLabel, label: "Заголовок блока логотипов", type: string }
+          - { name: andMore, label: "Подпись «и другие»", type: string }
+          - { name: quote1, label: "Текст отзыва", type: text }
+          - { name: quote1Author, label: "Автор отзыва", type: string }
+          - { name: quote1Role, label: "Должность автора", type: string }
+          - { name: helpTitle, label: "Заголовок «Чем помогаю»", type: string }
+          - { name: help, label: "Список: чем помогаю", type: string, list: true }
+          - { name: processTitle, label: "Заголовок «Как работаю»", type: string }
+          - { name: processLine, label: "Как работаю: вступление", type: text }
+          - name: phases
+            label: "Этапы (Understand / Identify / Execute)"
             type: object
             list: true
             fields:
-              - { name: k, label: Подпись, type: string }
-              - { name: t, label: Заголовок, type: string }
-              - { name: d, label: Описание, type: text }
-          - { name: aboutTitle, label: "Обо мне: заголовок", type: string }
-          - { name: aboutP1, label: "Обо мне: абзац 1", type: text }
-          - { name: aboutP2, label: "Обо мне: абзац 2", type: text }
-          - name: diffs
-            label: "Обо мне: отличия"
-            type: object
-            list: true
-            fields:
-              - { name: t, label: Заголовок, type: string }
-              - { name: d, label: Описание, type: text }
-          - { name: servicesTitle, label: "Услуги: заголовок", type: string }
-          - { name: servicesSub, label: "Услуги: подзаголовок", type: text }
-          - { name: deliverableLabel, label: "Подпись «Результат»", type: string }
-          - name: services
-            label: Услуги
-            type: object
-            list: true
-            fields:
-              - { name: n, label: Номер, type: string }
               - { name: t, label: Название, type: string }
+              - { name: k, label: "Уточнение в скобках", type: string }
               - { name: d, label: Описание, type: text }
-              - { name: r, label: Результат, type: text }
-          - { name: processTitle, label: "Как работаю: заголовок", type: string }
-          - { name: processSub, label: "Как работаю: подзаголовок", type: text }
-          - name: steps
-            label: Этапы работы
+          - { name: processNote, label: "Как работаю: примечание", type: text }
+          - { name: experienceTitle, label: "Заголовок «Опыт»", type: string }
+          - name: roles
+            label: Опыт
             type: object
             list: true
             fields:
-              - { name: n, label: Номер, type: string }
-              - { name: t, label: Название, type: string }
+              - { name: role, label: "Роль / место", type: string }
               - { name: d, label: Описание, type: text }
-          - { name: contactTitle, label: "Контакты: заголовок", type: string }
-          - { name: contactSub, label: "Контакты: подзаголовок", type: text }
+          - { name: contactTitle, label: "Заголовок «Контакты»", type: string }
+          - { name: contactSub, label: "Контакты: текст", type: text }
           - { name: fName, label: "Форма: имя", type: string }
           - { name: fEmail, label: "Форма: email", type: string }
-          - { name: fCompany, label: "Форма: компания", type: string }
           - { name: fMessage, label: "Форма: сообщение", type: string }
           - { name: fSubmit, label: "Форма: кнопка", type: string }
           - { name: formIdle, label: "Форма: подсказка", type: text }
-          - { name: formSent, label: "Форма: сообщение после отправки", type: text }
-          - { name: linkedinValue, label: "Подпись LinkedIn-карточки", type: string }
-          - { name: phoneLabel, label: "Подпись телефона", type: string }
+          - { name: formSent, label: "Форма: после отправки", type: text }
+          - { name: formMailto, label: "Форма: если открылся почтовый клиент", type: text }
+          - { name: formError, label: "Форма: сообщение об ошибке", type: text }
           - { name: footerNote, label: Подвал, type: string }
