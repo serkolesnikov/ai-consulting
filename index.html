@@ -55,7 +55,11 @@ function esc(s) {
 }
 
 function render() {
-  var t = DATA[LANG], s = DATA.site, L = DATA.logos;
+  var t = DATA[LANG] || {}, s = DATA.site || {}, L = DATA.logos || [];
+  // tolerate a content file that is missing fields (e.g. saved by an outdated CMS config)
+  t.help = t.help || [];
+  t.phases = t.phases || [];
+  t.roles = t.roles || [];
 
   var help = t.help.map(function (h) {
     return '<li style="font-size:18px; line-height:1.5;">' + esc(h) + '</li>';
@@ -202,7 +206,7 @@ function onSubmit(e) {
       form.reset();
       status.textContent = t.formSent;
     }).catch(function () {
-      status.textContent = t.formIdle;
+      status.textContent = t.formError || t.formIdle;
     });
     return;
   }
@@ -211,7 +215,7 @@ function onSubmit(e) {
     "?subject=" + encodeURIComponent("Consulting request — " + (payload.name || "website")) +
     "&body=" + encodeURIComponent([payload.name, payload.email, "", payload.message].join("\n"));
   SENT = true;
-  status.textContent = t.formSent;
+  status.textContent = t.formMailto || t.formSent;
 }
 
 fetch("content/site.json", { cache: "no-cache" })
