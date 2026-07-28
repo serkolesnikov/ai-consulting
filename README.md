@@ -1,53 +1,37 @@
 # Сайт-визитка Sergei Kolesnikov
 
-Статический сайт: один `index.html`, все тексты и картинки — в `content/site.json`.
-Никакой сборки не нужно: GitHub Pages отдаёт файлы как есть.
+Статический сайт. Вся вёрстка — в `index.html`, все тексты и картинки — в `content/site.json`.
+Сборка не нужна: GitHub Pages отдаёт файлы как есть.
 
 ```
-index.html            вся вёрстка и логика
-content/site.json     все тексты (EN / ES) и настройки контактов
+index.html            вёрстка и логика
+content/site.json     тексты (EN / ES) и настройки контактов
 assets/               фото, логотипы, аватар
 .pages.yml            описание полей для админки Pages CMS
-.nojekyll             отключает обработку Jekyll на GitHub Pages
+.nojekyll             отключает обработку Jekyll
 ```
 
-## 1. Публикация (10 минут, разово)
+## Обновление сайта на GitHub
 
-1. Зайдите на github.com → **New repository**.
-   Имя репозитория: **SKolesnikov95.github.io** (именно так — тогда адрес будет `https://skolesnikov95.github.io`).
-   Тип: **Public**. Создать.
-2. На странице репозитория: **Add file → Upload files**. Перетащите туда всё содержимое этой папки
-   (`index.html`, папки `content`, `assets`, файлы `.pages.yml`, `.nojekyll`, `README.md`) → **Commit changes**.
-3. **Settings → Pages**. В блоке *Build and deployment*: Source = **Deploy from a branch**,
-   Branch = **main**, папка = **/ (root)** → **Save**.
-4. Через 1–2 минуты сайт открыт по адресу **https://skolesnikov95.github.io**.
+Аккаунт переименован в **serkolesnikov**, поэтому репозиторий тоже надо переименовать:
+Settings → General → Repository name → **serkolesnikov.github.io** → Rename.
+После этого адрес сайта: **https://serkolesnikov.github.io**
 
-Свой домен (например `skolesnikov.ai`) можно подключить позже: Settings → Pages → Custom domain,
-плюс DNS-записи у регистратора. Сам домен платный, хостинг остаётся бесплатным.
+Затем загрузите файлы из этой папки поверх существующих:
+Add file → Upload files → перетащить `index.html`, папки `content` и `assets`, файл `.pages.yml` → Commit changes.
 
-## 2. Админка (редактирование текстов и картинок)
+## Админка
 
-1. Откройте **app.pagescms.org** → **Sign in with GitHub** → разрешите доступ к репозиторию
-   `SKolesnikov95.github.io`.
-2. Выберите репозиторий. Pages CMS прочитает `.pages.yml` и покажет форму со всеми полями сайта:
-   заголовки, услуги, этапы, отзыв, контакты, фото и логотипы (EN и ES отдельными разделами).
-3. Правите → **Save**. Правка уходит коммитом в GitHub, сайт обновляется автоматически за 1–2 минуты.
+app.pagescms.org → вход через GitHub → репозиторий `serkolesnikov.github.io` → раздел «Сайт».
+Правки уходят коммитом, сайт обновляется за 1–2 минуты.
 
-Картинки: в полях типа «Фото» можно загрузить новый файл — он попадёт в `assets/`.
+## Форма заявок
 
-## 3. Форма заявок
+Сейчас кнопка открывает почтовый клиент. Чтобы заявки приходили письмом с сайта:
+formspree.io → создать форму → скопировать endpoint вида `https://formspree.io/f/xxxxxxx` →
+вставить в админке в поле «Formspree endpoint».
 
-Сейчас кнопка «Send request» открывает почтовый клиент с готовым письмом.
-Чтобы заявки приходили на email прямо с сайта:
+## Локальная проверка
 
-1. Зарегистрируйтесь на **formspree.io** (бесплатный тариф — 50 заявок в месяц).
-2. Создайте форму, скопируйте её endpoint вида `https://formspree.io/f/xxxxxxx`.
-3. В админке: раздел *Контакты и общие настройки* → поле **Formspree endpoint** → вставьте ссылку → Save.
-
-После этого форма отправляет заявку без почтового клиента, а вы получаете письмо.
-
-## 4. Локальная проверка
-
-Просто открыть `index.html` двойным щелчком не получится: браузер запрещает читать
-`content/site.json` с диска. Проще смотреть уже опубликованную версию, либо запустить
-локальный сервер (`python3 -m http.server` в этой папке) и открыть `http://localhost:8000`.
+Открывать `index.html` двойным щелчком нельзя — браузер не даст прочитать `content/site.json`.
+Запустите `python3 -m http.server` в этой папке и откройте http://localhost:8000
