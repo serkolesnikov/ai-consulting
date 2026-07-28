@@ -34,12 +34,64 @@
     "avatar": "assets/avatar-ivo.png"
   },
   "en": {
+    "lead": "I help startups and growing companies put AI to work — and improve the product, automation and operations around it.",
+    "background": "Product and technology executive with a STEM background and over ten years of building new products and scaling mature ones, across B2C, B2B, B2B2C, platforms and AI/ML.",
+    "intro2": "Most recently Director of AI at Finom and Director of Products at Tinkoff.",
     "companiesLabel": "Worked at and with",
+    "andMore": "and others",
+    "cta": "Get in touch",
+    "helpTitle": "What I can help with",
+    "help": [
+      "AI audit and a roadmap prioritised by expected return",
+      "LLM assistants, chatbots and agents built into your systems",
+      "Automating documents, support and back-office work",
+      "Quality metrics and evaluation for AI in production",
+      "Product processes, strategy and fractional Head of AI / CPO",
+      "Team workshops and mentoring on AI product management"
+    ],
+    "processTitle": "How I work",
+    "processLine": "It starts with a short intro call — your business, your constraints, whether I'm the right person at all. After that the work runs as a loop:",
+    "phases": [
+      {
+        "t": "Understand",
+        "k": "(audit + discovery)",
+        "d": "where the business is now, where it wants to be, and what actually stands in the way — processes, systems, data, people."
+      },
+      {
+        "t": "Identify",
+        "k": "(proposal)",
+        "d": "a short list of opportunities, sized by expected return, and a concrete proposal for the one or two worth doing first."
+      },
+      {
+        "t": "Execute",
+        "k": "(build, testing, adoption)",
+        "d": "the solution built, tested on your real data, and put into daily use with documentation and training."
+      }
+    ],
+    "processNote": "What Execute shows changes what we understand, so the loop restarts — each time with a smaller, better-aimed step. Work is remote and by project, with a clear deliverable at every stage.",
+    "experienceTitle": "Experience",
+    "roles": [
+      {
+        "role": "Director of AI, Finom",
+        "d": "Built the AI function from zero in a European neobank for SMEs. AI-first strategy and 10+ solutions in production, from document processing to agents for support, monitoring and verification. Part of a $100M+ Series C built around the AI strategy."
+      },
+      {
+        "role": "Director of Products, Tinkoff",
+        "d": "Grew from senior analyst to Director of Products. Led a B2B2C unit with 10M+ monthly users, 1,000+ partners and a team of 150+, growing annual revenue 1.5× to $100M."
+      },
+      {
+        "role": "Mentor and lecturer, GoPractice",
+        "d": "Teaching managers product management for AI/ML products."
+      },
+      {
+        "role": "MIPT",
+        "d": "BSc in Applied Physics, Mathematics and Computer Science; MSc in Venture Capital and Technology Entrepreneurship."
+      }
+    ],
     "testimonialsLabel": "Recommendation",
     "quote1": "Had a great time working with Sergey at Finom! He was a Head of AI who basically took our AI initiatives from zero to one, launching several AI agents even when we had pretty limited resources. He's super into numbers and data, and it shows in everything he does. Definitely recommend him for any data-driven challenge!",
     "quote1Author": "Ivo Dimitrov",
     "quote1Role": "Co-founder and Chief AI Officer, Finom",
-    "processTitle": "How I work",
     "contactTitle": "Contact",
     "contactSub": "Let's talk! Please share your context or challenge below",
     "fName": "Name",
@@ -48,15 +100,69 @@
     "fSubmit": "Send",
     "formIdle": "Prefer Telegram? Usually the fastest way to reach me.",
     "formSent": "Thanks — your message is on its way. I'll get back to you within one working day.",
-    "footerNote": "Tarragona, Spain · Remote across the EU"
+    "footerNote": "Tarragona, Spain · Remote across the EU",
+    "formError": "Something went wrong. Please write to kolesnikov@phystech.edu or on Telegram.",
+    "formMailto": "Almost there: your email app opened with the request — send it from there and it reaches me."
   },
   "es": {
+    "lead": "Ayudo a startups y empresas en crecimiento a poner la IA a trabajar, y a mejorar el producto, la automatización y las operaciones a su alrededor.",
+    "background": "Directivo de producto y tecnología con formación STEM y más de diez años creando productos nuevos y escalando otros ya maduros, en B2C, B2B, B2B2C, plataformas e IA/ML.",
+    "intro2": "Más recientemente Director of AI en Finom y Director of Products en Tinkoff.",
     "companiesLabel": "He trabajado en y con",
+    "andMore": "y otras",
+    "cta": "Hablemos",
+    "helpTitle": "En qué puedo ayudar",
+    "help": [
+      "Auditoría de IA y hoja de ruta priorizada por retorno esperado",
+      "Asistentes LLM, chatbots y agentes integrados en sus sistemas",
+      "Automatización de documentos, soporte y back-office",
+      "Métricas y evaluación de calidad de la IA en producción",
+      "Procesos de producto, estrategia y Head of AI / CPO fraccional",
+      "Talleres y mentoría en gestión de producto de IA"
+    ],
+    "processTitle": "Cómo trabajo",
+    "processLine": "Empieza con una llamada breve: su negocio, sus limitaciones y si realmente soy la persona adecuada. A partir de ahí el trabajo funciona como un ciclo:",
+    "phases": [
+      {
+        "t": "Understand",
+        "k": "(auditoría + discovery)",
+        "d": "dónde está el negocio, a dónde quiere llegar y qué lo impide de verdad: procesos, sistemas, datos y personas."
+      },
+      {
+        "t": "Identify",
+        "k": "(propuesta)",
+        "d": "una lista corta de oportunidades dimensionadas por retorno esperado y una propuesta concreta para las una o dos que conviene hacer primero."
+      },
+      {
+        "t": "Execute",
+        "k": "(desarrollo, pruebas, adopción)",
+        "d": "la solución construida, probada con sus datos reales y puesta en uso diario, con documentación y formación."
+      }
+    ],
+    "processNote": "Lo que muestra Execute cambia lo que entendemos, así que el ciclo se reinicia, cada vez con un paso más pequeño y mejor dirigido. Trabajo en remoto y por proyectos, con un entregable claro en cada etapa.",
+    "experienceTitle": "Experiencia",
+    "roles": [
+      {
+        "role": "Director of AI, Finom",
+        "d": "Creé la función de IA desde cero en un neobanco europeo para pymes. Estrategia AI-first y más de 10 soluciones en producción, desde procesamiento de documentos hasta agentes de soporte, monitorización y verificación. Participé en una Series C de más de 100 M$ articulada en torno a la IA."
+      },
+      {
+        "role": "Director of Products, Tinkoff",
+        "d": "De analista sénior a Director of Products. Dirigí una unidad B2B2C con más de 10 M de usuarios mensuales, más de 1.000 socios y un equipo de 150+, multiplicando por 1,5 la facturación anual hasta 100 M$."
+      },
+      {
+        "role": "Mentor y profesor, GoPractice",
+        "d": "Formo a managers en gestión de producto de IA/ML."
+      },
+      {
+        "role": "MIPT",
+        "d": "Grado en Física Aplicada, Matemáticas e Informática; Máster en Capital Riesgo y Emprendimiento Tecnológico."
+      }
+    ],
     "testimonialsLabel": "Recomendación",
     "quote1": "Fue un placer trabajar con Sergey en Finom. Como Head of AI, llevó nuestras iniciativas de IA de cero a uno y lanzó varios agentes de IA incluso con recursos bastante limitados. Es muy analítico, muy de números y datos, y eso se nota en todo lo que hace. Lo recomiendo sin duda para cualquier reto basado en datos.",
     "quote1Author": "Ivo Dimitrov",
     "quote1Role": "Cofundador y Chief AI Officer, Finom",
-    "processTitle": "Cómo trabajo",
     "contactTitle": "Contacto",
     "contactSub": "Cuénteme qué proceso quiere mejorar y le devuelvo una primera visión de dónde la IA aporta retorno real.",
     "fName": "Nombre",
@@ -65,6 +171,8 @@
     "fSubmit": "Enviar",
     "formIdle": "¿Prefiere Telegram? Suele ser la vía más rápida.",
     "formSent": "Gracias, su mensaje está en camino. Le responderé en un día laborable.",
-    "footerNote": "Tarragona, España · Remoto en toda la UE"
+    "footerNote": "Tarragona, España · Remoto en toda la UE",
+    "formError": "Algo ha fallado. Escríbame a kolesnikov@phystech.edu o por Telegram.",
+    "formMailto": "Casi: se ha abierto su aplicación de correo con la solicitud — envíela desde allí y me llega."
   }
 }
